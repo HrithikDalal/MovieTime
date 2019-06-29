@@ -1,0 +1,14 @@
+<h1><u>Results</u></h1>
+<form action="/" method ="GET">
+    <button>Back</button>
+</form>
+<%data.Search.forEach(function(movie){%>
+<li><strong><%=movie.Title%></strong></li>
+<ul>
+    <li><img src="<%=movie.Poster%>"></li>
+    <li><strong>Year :</strong><%=movie.Year%></li>
+     <li><strong>IMDB ID :</strong><a href="http://www.omdbapi.com/?i=<%=movie.imdbID%>&plot=full&apikey=thewdb"><%=movie.imdbID%></a></li>
+     <li><a href="https://nl22.seedr.cc/ff_get/396971509/A.Star.is.Born.2018.HC.HDRip.XviD.AC3-EVO.avi?st=WjGe7XteXPbPL_pOC6sCsg&e=1547116885">Download</a></li>
+</ul>
+<%})%>
+<a href="/">Search Again</a>
